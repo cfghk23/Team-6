@@ -1,8 +1,11 @@
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import {Box,
-    Button, Card, CardActions, CardContent, CardHeader, Container, GlobalStyles, Grid, Link, ThemeProvider, Typography } from "@mui/material";
+import {
+    Box,
+    Button, Card, CardActions, CardContent, CardHeader, Container, GlobalStyles, Grid, Link, ThemeProvider, Typography
+} from "@mui/material";
 import Layout from "@theme/Layout";
 import React from "react";
+
 function Copyright(props: any) {
     return (
         <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -18,41 +21,35 @@ function Copyright(props: any) {
 
 const tiers = [
     {
-        title: 'Phone',
-        price: '100',
-        description: [
-            '10 users included',
-            '2 GB of storage',
-            'Help center access',
-            'Email support',
-        ],
-        buttonText: 'Sign up for free',
-        buttonVariant: 'outlined',
+        title: 'Glasses',
+        price: '1000',
     },
     {
-        title: 'Pro',
-        subheader: 'Most popular',
-        price: '15',
-        description: [
-            '20 users included',
-            '10 GB of storage',
-            'Help center access',
-            'Priority email support',
-        ],
-        buttonText: 'Get started',
-        buttonVariant: 'contained',
+        title: 'Dress',
+        price: '1000',
     },
     {
-        title: 'Enterprise',
-        price: '30',
-        description: [
-            '50 users included',
-            '30 GB of storage',
-            'Help center access',
-            'Phone & email support',
-        ],
-        buttonText: 'Contact us',
-        buttonVariant: 'outlined',
+        title: 'Hat',
+        price: '1000',
+    },
+    {
+        title: 'necklaces',
+        price: '1000',
+    }, {
+        title: 'bracelets',
+        price: '1000',
+    }, {
+        title: 'watches',
+        price: '1000',
+    }, {
+        title: 'pins',
+        price: '1000',
+    }, {
+        title: 'socks',
+        price: '1000',
+    }, {
+        title: 'gloves',
+        price: '1000',
     },
 ];
 const footers = [
@@ -88,147 +85,107 @@ export default function shopping(): JSX.Element {
             title={`Hello from ${siteConfig.title}`}
             description="Description will go into a meta tag in <head />">
             <main>
-                    {/* Hero unit */}
-                    <Container disableGutters maxWidth="sm" component="main" sx={{ pt: 8, pb: 6 }}>
-                        <Typography
-                            component="h1"
-                            variant="h2"
-                            align="center"
-                            color="text.primary"
-                            gutterBottom
-                        >
-                            Shopping
-                        </Typography>
-                        <Typography variant="h5" align="center" color="text.secondary" component="p">
-                            Make a right purchase!
-                        </Typography>
-                    </Container>
-                    {/* End hero unit */}
-                    <Container maxWidth="md" component="main">
-                        <Grid container spacing={5} alignItems="flex-end">
-                            {tiers.map((tier) => (
-                                // Enterprise card is full width at sm breakpoint
-                                <Grid
-                                    item
-                                    key={tier.title}
-                                    xs={12}
-                                    sm={tier.title === 'Enterprise' ? 12 : 6}
-                                    md={4}
-                                >
-                                    <Card>
-                                        <CardHeader
-                                            title={tier.title}
-                                            subheader={tier.subheader}
-                                            titleTypographyProps={{ align: 'center' }}
-                                            // action={tier.title === 'Pro' ? <StarIcon /> : null}
-                                            subheaderTypographyProps={{
-                                                align: 'center',
-                                            }}
-                                            sx={{
-                                                backgroundColor: (theme) =>
-                                                    theme.palette.mode === 'light'
-                                                        ? theme.palette.grey[200]
-                                                        : theme.palette.grey[700],
-                                            }}
-                                        />
-                                        <CardContent>
-                                            <Box
-                                                sx={{
-                                                    display: 'flex',
-                                                    justifyContent: 'center',
-                                                    alignItems: 'baseline',
-                                                    mb: 2,
-                                                }}
-                                            >
-                                                <Typography component="h2" variant="h3" color="text.primary">
-                                                    ${tier.price}
-                                                </Typography>
-                                                <Typography variant="h6" color="text.secondary">
-                                                    /mo
-                                                </Typography>
-                                            </Box>
-                                            <ul>
-                                                {tier.description.map((line) => (
-                                                    <Typography
-                                                        component="li"
-                                                        variant="subtitle1"
-                                                        align="center"
-                                                        key={line}
-                                                    >
-                                                        {line}
-                                                    </Typography>
-                                                ))}
-                                            </ul>
-                                        </CardContent>
-                                        <CardActions>
-                                            <Button
-                                                fullWidth
-                                                variant={tier.buttonVariant as 'outlined' | 'contained'}
-                                            >
-                                                {tier.buttonText}
-                                            </Button>
-                                        </CardActions>
-                                    </Card>
-                                </Grid>
-                            ))}
-                        </Grid>
-                    </Container>
-                    {/* Footer */}
-                    <Container
-                        maxWidth="md"
-                        component="footer"
-                        sx={{
-                            borderTop: (theme) => `1px solid ${theme.palette.divider}`,
-                            mt: 8,
-                            py: [3, 6],
-                        }}
+                <Container disableGutters maxWidth="sm" component="main" sx={{pt: 8, pb: 6}}>
+                    <Typography
+                        component="h1"
+                        variant="h2"
+                        align="center"
+                        color="text.primary"
+                        gutterBottom
                     >
-                        <Grid container spacing={4} justifyContent="space-evenly">
-                            {footers.map((footer) => (
-                                <Grid item xs={6} sm={3} key={footer.title}>
-                                    <Typography variant="h6" color="text.primary" gutterBottom>
-                                        {footer.title}
-                                    </Typography>
-                                    <ul>
-                                        {footer.description.map((item) => (
-                                            <li key={item}>
-                                                <Link href="#" variant="subtitle1" color="text.secondary">
-                                                    {item}
-                                                </Link>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </Grid>
-                            ))}
-                        </Grid>
-                        <Copyright sx={{ mt: 5 }} />
-                    </Container>
+                        Shopping
+                    </Typography>
+                    <Typography variant="h5" align="center" color="text.secondary" component="p">
+                        Make a right purchase! Remember to plan before you purchase.
+                    </Typography>
+                </Container>
+                <Container maxWidth="md" component="main">
+                    <Grid container spacing={5} alignItems="flex-end">
+                        {tiers.map((tier) => (
+                            <Grid
+                                item
+                                key={tier.title}
+                                xs={12}
+                                sm={tier.title === 'Enterprise' ? 12 : 6}
+                                md={4}
+                            >
+                                <Card>
+                                    <CardHeader
+                                        title={tier.title}
+                                        subheader={tier.subheader}
+                                        titleTypographyProps={{align: 'center'}}
+                                        // action={tier.title === 'Pro' ? <StarIcon /> : null}
+                                        subheaderTypographyProps={{
+                                            align: 'center',
+                                        }}
+                                        sx={{
+                                            backgroundColor: (theme) =>
+                                                theme.palette.mode === 'light'
+                                                    ? theme.palette.grey[200]
+                                                    : theme.palette.grey[700],
+                                        }}
+                                    />
+                                    <CardContent>
+                                        <Box
+                                            sx={{
+                                                display: 'flex',
+                                                justifyContent: 'center',
+                                                alignItems: 'baseline',
+                                                mb: 2,
+                                            }}
+                                        >
 
-                {/*<Typography*/}
-                {/*    component="h1"*/}
-                {/*    variant="h2"*/}
-                {/*    align="center"*/}
-                {/*    color="text.primary"*/}
-                {/*    gutterBottom*/}
-                {/*>*/}
-                {/*    Pricing*/}
-                {/*</Typography>*/}
-                {/*<Container disableGutters maxWidth="sm" component="main" sx={{pt: 8, pb: 6}}>*/}
-                {/*    <Typography*/}
-                {/*        component="h1"*/}
-                {/*        variant="h2"*/}
-                {/*        align="center"*/}
-                {/*        color="text.primary"*/}
-                {/*        gutterBottom*/}
-                {/*    >*/}
-                {/*        Pricing*/}
-                {/*    </Typography>*/}
-                {/*    <Typography variant="h5" align="center" color="text.secondary" component="p">*/}
-                {/*        Quickly build an effective pricing table for your potential customers with*/}
-                {/*        this layout. It&apos;s built with default MUI components with little*/}
-                {/*        customization.*/}
-                {/*    </Typography>*/}
-                {/*</Container>*/}
+                                            <Typography component="h2" variant="h6" color="text.primary" align='center'>
+                                                <img src='img/undraw_docusaurus_react.svg' alt='product picture'/>
+                                                ${tier.price + ' coins'}
+                                            </Typography>
+                                        </Box>
+                                        <ul>
+                                        </ul>
+                                    </CardContent>
+                                    <CardActions>
+                                        <Button
+                                            fullWidth
+                                            variant='contained'
+                                        >
+                                            purchase
+                                        </Button>
+                                    </CardActions>
+                                </Card>
+                            </Grid>
+                        ))}
+                    </Grid>
+                </Container>
+                {/* Footer */}
+                <Container
+                    maxWidth="md"
+                    component="footer"
+                    sx={{
+                        borderTop: (theme) => `1px solid ${theme.palette.divider}`,
+                        mt: 8,
+                        py: [3, 6],
+                    }}
+                >
+                    <Grid container spacing={4} justifyContent="space-evenly">
+                        {footers.map((footer) => (
+                            <Grid item xs={6} sm={3} key={footer.title}>
+                                <Typography variant="h6" color="text.primary" gutterBottom>
+                                    {footer.title}
+                                </Typography>
+                                <ul>
+                                    {footer.description.map((item) => (
+                                        <li key={item}>
+                                            <Link href="#" variant="subtitle1" color="text.secondary">
+                                                {item}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </Grid>
+                        ))}
+                    </Grid>
+                    <Copyright sx={{mt: 5}}/>
+                </Container>
             </main>
         </Layout>
     );
