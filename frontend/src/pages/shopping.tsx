@@ -8,7 +8,7 @@ import React, {useState} from "react";
 
 //check wether user can purchase specific item
 const coinOwned = 10000
-const [purchaseConfirmation, setPurchaseConfirmation] = useState<boolean>(true)
+// const [purchaseConfirmation, setPurchaseConfirmation] = useState<boolean>(true)
 
 const tiers = [
     {
@@ -187,18 +187,7 @@ export default function shopping(): JSX.Element {
                     </Grid>
                 </Container>
             </main>
-            {
-                purchaseConfirmation &&
-        //         <Button variant="outlined" onClick={handleClickOpen}>
-        //             Open simple dialog
-        //         </Button>
-        //         <SimpleDialog
-        //         selectedValue={selectedValue}
-        //     open={open}
-        //     onClose={handleClose}
-        // />
 
-}
 </Layout>
 
 )
