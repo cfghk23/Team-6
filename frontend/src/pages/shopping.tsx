@@ -10,19 +10,6 @@ import React from "react";
 const coinOwned = 10000
 
 
-function Copyright(props: any) {
-    return (
-        <Typography variant="body2" color="text.secondary" align="center" {...props}>
-            {'Copyright © '}
-            <Link color="inherit" href="https://mui.com/">
-                Your Website
-            </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    );
-}
-
 const tiers = [
     {
         title: 'Glasses',
@@ -187,7 +174,6 @@ export default function shopping(): JSX.Element {
                             </Grid>
                         ))}
                     </Grid>
-                    <Copyright sx={{mt: 5}}/>
                 </Container>
             </main>
         </Layout>
