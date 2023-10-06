@@ -9,72 +9,72 @@
     "name":["Maplewood Kindergarten",false],
     "quantity": 1485, 
     "date": "21.Feb.2021",
-    "progress": 35.4  
+    "progress": 4  
   },
   {
     "name":["Riverside Elementary",false],
     "quantity": 1024, 
     "date": "13.Mar.2021",
-    "progress": 25  
+    "progress": 4.2 
   },
   {
     "name":["Sunnydale",false],
     "quantity": 858, 
     "date": "24.Jan.2021",
-    "progress": 100  
+    "progress": 5.1 
   },
   {
     "name":["Pinecrest Elementary",false],
     "quantity": 258, 
     "date": "Oct 24, 2022",
-    "progress": 75.5  
+    "progress": 5.3 
   },
   {
     "name":["Nova Academy",false],
     "quantity": 258, 
     "date": "Oct 24, 2022",
-    "progress": 75.5  
+    "progress": 12 
   },
   {
     "name":["Elite High School",false],
     "quantity": 258, 
     "date": "12.Jan.2021",
-    "progress": 75.5  
+    "progress": 21 
   },
   {
     "name":["Alliance High School",false],
     "quantity": 858, 
     "date": "21.Feb.2021",
-    "progress": 35.4  
+    "progress": 33
   },
   {
     "name":["Woodland Elementary School",false],
     "quantity": 1024, 
     "date": "13.Mar.2021",
-    "progress": 25  
+    "progress": 35
   },
   {
     "name":["Blossom Hill Elementary School",false],
     "quantity": 258, 
     "date": "24.Jan.2021",
-    "progress": 100  
+    "progress": 37 
   },
   {
     "name":["Marketplace",false],
     "quantity": 1024, 
     "date": "Oct 24, 2022",
-    "progress": 75.5  
+    "progress": 41 
   },
   {
     "name":["Cedar Grove Elementary",false],
     "quantity": 258, 
     "date": "Oct 24, 2022",
-    "progress": 75.5  
+    "progress": 41.1 
   },
   {
     "name":["Harmony Elementary",false],
     "quantity": 258, 
     "date": "Oct 24, 2022",
-    "progress": 75.5  
+    "progress": 41.3  
   }
 ]

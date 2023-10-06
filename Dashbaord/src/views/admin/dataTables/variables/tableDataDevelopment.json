@@ -3,66 +3,66 @@
     "name":"Island School",
     "tech": ["apple","android","windows"], 
     "date": "12.Jan.2021",
-    "progress": 75.5  
+    "progress": 98.3
   },
   {
     "name":"Hong Kong Academy",
     "tech": ["apple" ], 
     "date": "21.Feb.2021",
-    "progress": 35.4  
+    "progress": 97
   },
   {
     "name":"King's College",
     "tech": ["apple" ,"windows"], 
     "date": "13.Mar.2021",
-    "progress": 25  
+    "progress": 92.1
   },
   {
     "name":"St. Paul's College",
     "tech": ["apple","android","windows"], 
     "date": "24.Jan.2021",
-    "progress": 100  
+    "progress": 90
   },
   {
     "name":"Ying Wa Girl's High School",
     "tech": ["apple", "windows"], 
     "date": "Oct 24, 2022",
-    "progress": 75.5  
+    "progress": 89  
   },
   {
     "name":"Delta School",
     "tech": ["apple","android","windows"], 
     "date": "Oct 24, 2022",
-    "progress": 75.5  
+    "progress": 88  
   },
   {
     "name":"Man Kiu High School",
     "tech": ["apple","android","windows"], 
     "date": "12.Jan.2021",
-    "progress": 75.5  
+    "progress": 87.3 
   },
   {
     "name":"Heep Yun School",
     "tech": ["apple" ], 
     "date": "21.Feb.2021",
-    "progress": 35.4  
+    "progress": 86  
   },
   {
     "name":"Lingnan High School",
     "tech": ["apple" ,"windows"], 
     "date": "13.Mar.2021",
-    "progress": 25  
+    "progress": 85.4  
   },
   {
     "name":"Discovery College",
     "tech": ["apple","android","windows"], 
     "date": "24.Jan.2021",
-    "progress": 100  
+    "progress": 85  
   },
   {
     "name":"Anantra College",
     "tech": ["apple", "windows"], 
     "date": "Oct 24, 2022",
-    "progress": 75.5  
+    "progress": 84  
   }
 ]
