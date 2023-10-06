@@ -9,6 +9,12 @@
 7. Refine and Polish
 8. Document/Present
 
+## Branching
+
+1. Split frontend and backend to different branches
+2. Commit to respective branches
+3. Merge to main
+
 ## Useful git commands:
 
 - Create new branch and switch:
