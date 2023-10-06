@@ -22,7 +22,7 @@ const users = [
     password: 'password456',
     username: 'janedoe',
     id: '1abx3cde',
-    status: 'student',
+    status: 'admin',
   },
   {
     email: 'bob.smith@example.com',
@@ -30,6 +30,13 @@ const users = [
     username: 'bobsmith',
     id: '2fgh4ijk',
     status: 'teacher',
+  },
+  {
+    email: 'allan.walker@example.com',
+    password: 'password789',
+    username: 'allan.walker',
+    id: '2fgh4ijk',
+    status: 'student',
   },
 ]
 const threadList = [
@@ -149,6 +156,33 @@ app.post('/api/create/thread', async (req, res) => {
 app.get('/api/all/threads', (req, res) => {
   res.json({
     threads: threadList,
+  })
+})
+
+// Delete a Thread
+app.delete('/api/thread/delete', (req, res) => {
+  const { threadId, id } = req.body
+  const result = threadList.filter((thread) => thread.id === threadId)
+
+  if (result.length === 0) {
+    return res.json({
+      error_message: 'Thread not found',
+    })
+  }
+
+  const user = users.find((user) => user.id === id)
+
+  if (!user || user.status !== 'teacher') {
+    return res.json({
+      error_message: 'You are not authorized to delete this thread',
+    })
+  }
+
+  const threadIndex = threadList.indexOf(result[0])
+  threadList.splice(threadIndex, 1)
+
+  res.json({
+    message: 'Thread deleted successfully!',
   })
 })
 
