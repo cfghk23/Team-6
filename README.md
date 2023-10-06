@@ -1,5 +1,5 @@
 # Team-6
-
+Link :https://docs.google.com/presentation/d/1IZZ11h8WnREmSM0Ms-lLp0FCAfhR3wis/edit?usp=sharing&ouid=116592093760796468933&rtpof=true&sd=true 
 PPT: https://docs.google.com/presentation/d/1EEfqnWva55caik7d4MN8PLxcSw14296stovk8QoaWtM/edit?usp=sharing
 
 app.patch('/api/update/thread', async (req, res) => {
