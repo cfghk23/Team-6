@@ -29,6 +29,7 @@ interface ListCardProps {
   description: string
   onChange: any
   onDelete: any
+  noDelete: boolean
 }
 
 const ListCard = (props: ListCardProps) => {
@@ -147,7 +148,7 @@ const ListCard = (props: ListCardProps) => {
                             </DialogActions>
                         </Dialog>
 
-                    <Button variant="text" onClick={() => {
+                    <Button disabled={props.noDelete} variant="text" onClick={() => {
                 axios
                   .post('http://localhost:4000/api/thread/delete', {
                     threadId: '9qqj9wgn',
@@ -187,19 +188,19 @@ export default function SignIn() {
       <Box display="flex" padding='50px' alignItems='center' alignContent='center' justifyContent="center">
         <Stack spacing={2} direction="row">
             <Stack spacing={2} direction="column">
-              {deleted[0] ? null : <ListCard title="Doubts on net income" description="I am not too sure net income and these statistics..." onChange={() => {setContentIsLongQ(true)}}  onDelete={() => {
+              {deleted[0] ? null : <ListCard title="Doubts on net income" description="I am not too sure net income and these statistics..." noDelete={false} onChange={() => {setContentIsLongQ(true)}}  onDelete={() => {
                 var d = deleted;
                 d[0] = true;
                 setDeleted(d);
                 forceUpdate();
               }}/>}
-              {deleted[1] ? null : <ListCard title="Why do we need credit cards?" description="I had a question regarding this topic I read yesterday and was confused..." onChange={() => {setContentIsLongQ(false)}} onDelete={() => {
+              {deleted[1] ? null : <ListCard title="Why do we need credit cards?" description="I had a question regarding this topic I read yesterday and was confused..." noDelete={false} onChange={() => {setContentIsLongQ(false)}} onDelete={() => {
                 var d = deleted;
                 d[1] = true;
                 setDeleted(d);
                 forceUpdate();
               }}/>}
-              <ListCard title="What is the purpose of a credit score?" description="Like why use credit score, it makes it looks like a competition..." onChange={() => {setContentIsLongQ(false)}} onDelete={() => {
+              <ListCard title="What is the purpose of a credit score?" description="Like why use credit score, it makes it looks like a competition..." noDelete={true} onChange={() => {setContentIsLongQ(false)}} onDelete={() => {
                 var d = deleted;
                 d[2] = true;
                 setDeleted(d);
