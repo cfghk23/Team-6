@@ -60,17 +60,36 @@
 
 ## Questions
 
-1. What courses they have access to?
+1. Who decides who has access to what course?
+
+- teacher can choose what model can go form
+- pick certain ones
+- self-directed learning
+- design thinking
+
+- Issue: not enough class time, not enough experience
+- Self-navigation, self-directed, students can learn by themselves
+- Teacher lesson plan
+
 2. Can we use IOT?
 3. Can a course use different party resources?
    - Kahoot, is it ok to direct them?
 4. What metrics do we need to take account for?
 
-   - Time
-   - has to be divided by course name
+[StoryLine360: What answer correct/wrong]
+
+- Time
+- has to be divided by course name
 
 5. Visualize the data (teachers)
 6. Leaderboard
+7. Should there be different design for different user groups?
+
+- different design
+
+## Answers
+
+1. Projects: Business Plan competition, budgeting
 
 ## Branching
 
