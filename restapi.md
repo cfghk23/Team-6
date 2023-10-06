@@ -27,6 +27,10 @@
 3. `POST` /api/create/thread
 
 ```
+{
+  "thread": "New thread title",
+  "userId": "0qxzb2ye"
+}
 
 ```
 
@@ -52,13 +56,37 @@
 
 ```
 {
-  "threadId": "qdh95n8z",
+  "threadId": "9qqj9wgn",
   "userId": "0qxzb2ye"
 }
 ```
 
-````
+```
 {
     "message": "You've reacted to the post!"
-}```
-````
+}
+```
+
+6. `POST` `localhost:4000/api/create/reply`
+
+- Create a reply
+
+```
+{
+  "id": "9qqj9wgn",
+  "userId": "0qxzb2ye",
+  "reply": "What is compound interest?"
+}
+```
+
+7. `POST` `localhost:4000/api/thread/replies`
+
+```
+{
+  "id": "9qqj9wgn"
+}
+```
+
+[fix]
+
+1. [ ] delete ONLY when authorized
