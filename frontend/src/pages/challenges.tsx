@@ -53,6 +53,7 @@ interface ContentCardProps {
 
 function ContentCard(props: ContentCardProps) {
   const [selected, setSelected] = React.useState(0);
+  const [finished, setFinished] = React.useState(false);
   const LongQDemo = () => <>
       {/* <img src="img/docusaurus-social-card.jpg" /> */}
       <Typography variant="h4" color="text.secondary" sx={{padding: '5px'}}>
@@ -67,6 +68,7 @@ function ContentCard(props: ContentCardProps) {
       <TextField
         id="outlined-multiline-static"
         multiline
+        disabled={finished}
         rows={4}
         sx={{ padding: "5px", width: "100%" }}
       />
@@ -106,10 +108,10 @@ function ContentCard(props: ContentCardProps) {
         orientation='vertical'
         sx={{ padding: "5px", width: "100%", alignContent: "center", justifyContent: "center" }}
       >
-        <Box style={{ padding: '5px' }}><ToggleButton value={0} selected={selected == 0} onClick={(event, value) => setSelected(value)} style={{ textAlign: 'left' }}>Saving involves putting money aside for short-term goals, while investing involves putting money into long-term ventures.</ToggleButton></Box>
-        <Box style={{ padding: '5px' }}><ToggleButton value={1} selected={selected == 1} onClick={(event, value) => setSelected(value)} style={{ textAlign: 'left' }}>Saving is only for emergencies, while investing is for long-term financial growth.</ToggleButton></Box>
-        <Box style={{ padding: '5px' }}><ToggleButton value={2} selected={selected == 2} onClick={(event, value) => setSelected(value)} style={{ textAlign: 'left' }}>Saving is a low-risk strategy, while investing carries a higher level of risk.</ToggleButton></Box>
-        <Box style={{ padding: '5px' }}><ToggleButton value={3} selected={selected == 3} onClick={(event, value) => setSelected(value)} style={{ textAlign: 'left' }}>Saving is done through banks, while investing is done through the stock market.</ToggleButton></Box>
+        <Box style={{ padding: '5px' }}><ToggleButton value={0} disabled={finished} selected={selected == 0} onClick={(event, value) => setSelected(value)} style={{ textAlign: 'left' }}>Saving involves putting money aside for short-term goals, while investing involves putting money into long-term ventures.</ToggleButton></Box>
+        <Box style={{ padding: '5px' }}><ToggleButton value={1} disabled={finished} selected={selected == 1} onClick={(event, value) => setSelected(value)} style={{ textAlign: 'left' }}>Saving is only for emergencies, while investing is for long-term financial growth.</ToggleButton></Box>
+        <Box style={{ padding: '5px' }}><ToggleButton value={2} disabled={finished} selected={selected == 2} onClick={(event, value) => setSelected(value)} style={{ textAlign: 'left' }}>Saving is a low-risk strategy, while investing carries a higher level of risk.</ToggleButton></Box>
+        <Box style={{ padding: '5px' }}><ToggleButton value={3} disabled={finished} selected={selected == 3} onClick={(event, value) => setSelected(value)} style={{ textAlign: 'left' }}>Saving is done through banks, while investing is done through the stock market.</ToggleButton></Box>
       </ToggleButtonGroup>
     </>
 
@@ -120,9 +122,9 @@ function ContentCard(props: ContentCardProps) {
       </CardContent>
       <CardActions>
         {props.isLong ?
-        <Button> <DoneIcon style={{padding: '2px 0px'}} />
+        <Button onClick={(event) => setFinished(true)}> <DoneIcon style={{padding: '2px 0px'}} />
         Mark as Complete & Get +10 Coins After Marked!</Button>
-        : <Button> <AttachMoneyIcon style={{padding: '2px 0px'}} />
+        : <Button onClick={(event) => setFinished(true)}> <AttachMoneyIcon style={{padding: '2px 0px'}} />
         Submit Your Answer & Get +5 Coins!</Button>}
       </CardActions>
     </Card>
