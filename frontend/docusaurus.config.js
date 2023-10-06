@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'M2 Learning Platform',
+  tagline: 'Finance is cool',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -75,6 +75,18 @@ const config = {
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Classes',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar',
+            position: 'left',
+            label: 'Challenges',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar',
+            position: 'left',
+            label: 'Progress Dashboard',
           },
           {to: '/test', label: 'Test', position: 'left'},
           {
