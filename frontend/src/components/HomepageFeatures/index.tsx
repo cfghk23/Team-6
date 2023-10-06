@@ -10,32 +10,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Focus on What Matters',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        M2 is designed to help you learn the essential skills and ethics of finance through an interesting and fun gaming-based approach.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Learn by Competing',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        M2 lets you focus on your learning and practice it out by competing with your peers. Complete weekly challenges to earn badges and get a higher ranking.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Learn Anytime-Anywhere',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Access your learning materials anytime and anywhere using your laptop and tablets.
       </>
     ),
   },
