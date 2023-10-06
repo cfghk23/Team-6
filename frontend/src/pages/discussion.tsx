@@ -20,40 +20,40 @@ import {
 import axios from 'axios'
 
 interface ListCardProps {
-  title: string
-  description: string
-  onChange: any
+  title: string;
+  description: string;
+  onChange: any;
+  onDelete: any;
 }
 
 const ListCard = (props: ListCardProps) => {
   return (
-    <Card sx={{ maxWidth: 10000 }}>
-      <ButtonBase
-        onClick={(event) => props.onChange()}
-        style={{
-          display: 'block',
-          textAlign: 'initial',
-        }}
-      >
+    <Card sx={{ width: 800 }}>
         <CardContent>
-          <Stack
-            spacing={{ xs: 1, sm: 2 }}
-            direction='row'
-            useFlexGap
-            flexWrap='wrap'
-          >
-            <img
-              src='img/docusaurus-social-card.jpg'
-              width={175}
-              height={100}
-            />
-            <Typography gutterBottom variant='h5' component='div'>
-              Question: I had a question regarding this topic I read yesterday
-              and was confused...
-            </Typography>
-            <Button
-              variant='text'
-              onClick={() => {
+            <Stack spacing={2} direction="column">
+                <ButtonBase
+                    onClick={event => props.onChange()}
+                    style={{
+                        display: 'block',
+                        textAlign: 'initial',
+                    }}
+                >
+                <Stack spacing={{ xs: 1, sm: 2 }} direction="row" useFlexGap>
+                    <Stack spacing={{ xs: 1, sm: 2 }} direction="row" useFlexGap>
+                        <img src="img/docusaurus-social-card.jpg" width={175} height={100}/>
+                        <Stack spacing={2} direction="column">
+                            <Typography gutterBottom variant="body1" component="div">
+                                {props.title}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                {props.description}
+                            </Typography>
+                        </Stack>
+                    </Stack>
+                </Stack>
+                </ButtonBase>
+                <Stack spacing={{ xs: 1, sm: 2 }} direction="row" useFlexGap>
+                    <Button variant="text" onClick={() => {
                 axios
                   .post('http://localhost:4000/api/thread/like', {
                     threadId: '9qqj9wgn',
@@ -65,13 +65,8 @@ const ListCard = (props: ListCardProps) => {
                   .catch(function (error) {
                     console.log(error)
                   })
-              }}
-            >
-              Like
-            </Button>
-            <Button
-              variant='text'
-              onClick={() => {
+              }}>Like</Button>
+                    <Button variant="text" onClick={() => {
                 axios
                   .post('http://localhost:4000/api/create/reply', {
                     threadId: '9qqj9wgn',
@@ -83,14 +78,21 @@ const ListCard = (props: ListCardProps) => {
                   .catch(function (error) {
                     console.log(error)
                   })
-              }}
-            >
-              Comment
-            </Button>
-            <Button variant='text'>Edit</Button>
-            <Button
-              variant='text'
-              onClick={() => {
+              }}>Comment</Button>
+                    <Button variant="text" onClick={() => {
+                axios
+                  .post('http://localhost:4000/api/create/reply', {
+                    threadId: '9qqj9wgn',
+                    userId: '0qxzb2ye',
+                  })
+                  .then(function (response) {
+                    console.log(response)
+                  })
+                  .catch(function (error) {
+                    console.log(error)
+                  })
+              }}>Edit</Button>
+                    <Button variant="text" onClick={() => {
                 axios
                   .post('http://localhost:4000/api/thread/delete', {
                     threadId: '9qqj9wgn',
@@ -102,62 +104,51 @@ const ListCard = (props: ListCardProps) => {
                   .catch(function (error) {
                     console.log(error)
                   })
-              }}
-            >
-              Delete
-            </Button>
-          </Stack>
-          <Typography variant='body2' color='text.secondary'>
-            {props.description}
-          </Typography>
+                  props.onDelete()}
+              }>Delete</Button>
+                </Stack>
+            </Stack>
         </CardContent>
-      </ButtonBase>
     </Card>
   )
 }
 
 interface ContentCardProps {
-  isLong: boolean
-}
+  isLong: boolean;
+};
+
 
 export default function SignIn() {
-  const [contentIsLongQ, setContentIsLongQ] = React.useState(true)
+  const [contentIsLongQ, setContentIsLongQ] = React.useState(true);
+  const [deleted, setDeleted] = React.useState([false, false, false])
+  const [, forceUpdate] = React.useReducer(x => x + 1, 0);
 
   return (
-    <Layout title={`Test`} description='This is a test page'>
-      <Box
-        display='flex'
-        padding='50px'
-        alignItems='center'
-        alignContent='center'
-        justifyContent='center'
-      >
-        <Stack spacing={2} direction='row'>
-          <Box height='75vh' style={{ overflowY: 'scroll' }}>
-            <Stack spacing={2} direction='column'>
-              <ListCard
-                title='Budget'
-                description='Doubts on net income'
-                onChange={() => {
-                  setContentIsLongQ(true)
-                }}
-              />
-              <ListCard
-                title='Class 2'
-                description='I had a question on hedging'
-                onChange={() => {
-                  setContentIsLongQ(false)
-                }}
-              />
-              <ListCard
-                title='Class 2'
-                description='This is a class'
-                onChange={() => {
-                  setContentIsLongQ(false)
-                }}
-              />
-            </Stack>
-          </Box>
+    <Layout
+      title={`Test`}
+      description="This is a test page">
+      <Box display="flex" padding='50px' alignItems='center' alignContent='center' justifyContent="center">
+        <Stack spacing={2} direction="row">
+            <Stack spacing={2} direction="column">
+              {deleted[0] ? null : <ListCard title="Doubts on net income" description="I am not too sure net income and these statistics..." onChange={() => {setContentIsLongQ(true)}}  onDelete={() => {
+                var d = deleted;
+                d[0] = true;
+                setDeleted(d);
+                forceUpdate();
+              }}/>}
+              {deleted[1] ? null : <ListCard title="Why do we need credit cards?" description="I had a question regarding this topic I read yesterday and was confused..." onChange={() => {setContentIsLongQ(false)}} onDelete={() => {
+                var d = deleted;
+                d[1] = true;
+                setDeleted(d);
+                forceUpdate();
+              }}/>}
+              {deleted[2] ? null : <ListCard title="What is the purpose of a credit score?" description="Like why use credit score, it makes it looks like a competition..." onChange={() => {setContentIsLongQ(false)}} onDelete={() => {
+                var d = deleted;
+                d[2] = true;
+                setDeleted(d);
+                forceUpdate();
+              }}/>}
+            </Stack>          
         </Stack>
       </Box>
     </Layout>
