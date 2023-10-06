@@ -42,6 +42,21 @@
   2. Elevator pitch
   3. Parent Academy
 
+#  Have-> 
+  Journey with animated character
+  Make decisions for character
+  Not good looking and rigid
+  Focuses more on completion than progress
+
+# Need-> 
+  Efficient
+  Easy to navigate
+  Gaming element (fun)
+  Increase engagement
+  Give access to teachers, help them see progress of each student
+  Easy to maintain, doesn’t require tech staff
+
+
 ## Problem Statement
 
 1. Users (Students)
