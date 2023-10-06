@@ -94,6 +94,12 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
+          {to: '/shopping', label: 'Shopping', position: 'left'},
+          {
+            href: 'https://github.com/facebook/docusaurus',
+            label: 'GitHub',
+            position: 'right',
+          },
         ],
       },
     //   footer: {
