@@ -1,24 +1,29 @@
-# Team-6
+## Symposium
 
-1. Understand the requirements
-2. Plan and Ideate
-3. Design and Architecture
-4. Split the tasks
-5. Implement
-6. Test and Bug Fix
-7. Refine and Polish
-8. Document/Present
+![screenie](https://github.com/jafarlihi/symposium/raw/master/symp.png)
 
-## Useful git commands:
+### Features
+- Threads and posts
+- Categories
+- Profiles
+- Infinite scroll
+- Real-time updates
+- Notifications
+### Technologies
+Go, React, Redux, Webpack, Bootstrap, JWT, RESTful API, WebSocket, PostgreSQL
+### Installation
+Write down PostgreSQL details, JWT signing secret, and port to `./api/config.json`.
 
-- Create new branch and switch:
+#### Local
+Write API URL to `build.sh` "export API_URL=" line.
 
-```
-- git checkout -b feature-branch
-```
+Make sure you have Go and NPM installed.
 
-- Switch to branch:
+Run `build.sh` and then run `./build/api`.
 
-```
-- git checkout feature-branch
-```
+#### Dockerfile
+Write API URL to line 7 of Dockerfile, as an ENV directive.
+
+Change EXPOSE-d port at line 18 to match the one specified in `config.json`.
+
+Build the image.

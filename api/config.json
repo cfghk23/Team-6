@@ -1,0 +1,11 @@
+{
+    "jwt": {
+        "signingSecret": ""
+    },
+    "database": {
+        "url": "postgres://postgres:password@localhost:5432/postgres?sslmode=disable"
+    },
+    "httpServer": {
+        "port": "8081"
+    }
+}
