@@ -1,13 +1,20 @@
 # Team-6
 
-1. Understand the requirements
-2. Plan and Ideate
-3. Design and Architecture
-4. Split the tasks
-5. Implement
-6. Test and Bug Fix
-7. Refine and Polish
-8. Document/Present
+1. [ ] Understand the requirements
+2. [ ] Plan and Ideate
+3. [ ] Design and Architecture
+4. [ ] Split the tasks
+5. [ ] Implement
+6. [ ] Test and Bug Fix
+7. [ ] Refine and Polish
+8. [ ] Document/Present
+
+## Team Roles
+
+1. frontend (3 people~)
+2. backend (3 people~)
+3. Presentation
+4. Time-keeper
 
 ## Branching
 
