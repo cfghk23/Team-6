@@ -90,9 +90,9 @@ export default function AdminNavbar(props) {
 				<Box mb={{ sm: '8px', md: '0px' }}>
 					<Breadcrumb>
 						<BreadcrumbItem color={secondaryText} fontSize='sm' mb='5px'>
-							<BreadcrumbLink href='#' color={secondaryText}>
+							{/* <BreadcrumbLink href='#' color={secondaryText}>
 								Pages
-							</BreadcrumbLink>
+							</BreadcrumbLink> */}
 						</BreadcrumbItem>
 
 						<BreadcrumbItem color={secondaryText} fontSize='sm'>
@@ -122,13 +122,13 @@ export default function AdminNavbar(props) {
 					</Link>
 				</Box>
 				<Box ms='auto' w={{ sm: '100%', md: 'unset' }}>
-					<AdminNavbarLinks
+					{/* <AdminNavbarLinks
 						onOpen={props.onOpen}
 						logoText={props.logoText}
 						secondary={props.secondary}
 						fixed={props.fixed}
 						scrolled={scrolled}
-					/>
+					/> */}
 				</Box>
 			</Flex>
 			{secondary ? <Text color='white'>{message}</Text> : null}
