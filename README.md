@@ -3,39 +3,38 @@
 PPT: https://docs.google.com/presentation/d/1EEfqnWva55caik7d4MN8PLxcSw14296stovk8QoaWtM/edit?usp=sharing
 
 app.patch('/api/update/thread', async (req, res) => {
-  const { threadId, newTitle, userId } = req.body
+const { threadId, newTitle, userId } = req.body
 
-  // Find the thread in the threadList
-  let thread = threadList.find(t => t.id === threadId)
+// Find the thread in the threadList
+let thread = threadList.find(t => t.id === threadId)
 
-  if (!thread) {
-    return res.status(404).json({
-      message: 'Thread not found!'
-    })
-  }
+if (!thread) {
+return res.status(404).json({
+message: 'Thread not found!'
+})
+}
 
-  // Check if the user is authorized to update the thread
-  if (thread.userId !== userId) {
-    return res.status(403).json({
-      message: 'User not authorized to update this thread'
-    })
-  }
+// Check if the user is authorized to update the thread
+if (thread.userId !== userId) {
+return res.status(403).json({
+message: 'User not authorized to update this thread'
+})
+}
 
-  // Update the thread
-  thread.title = newTitle
+// Update the thread
+thread.title = newTitle
 
-  // Persist the update in novu.topics
-  await novu.topics.update({
-    key: threadId,
-    name: newTitle,
-  })
-
-  res.json({
-    message: 'Thread updated successfully!',
-    threads: threadList,
-  })
+// Persist the update in novu.topics
+await novu.topics.update({
+key: threadId,
+name: newTitle,
 })
 
+res.json({
+message: 'Thread updated successfully!',
+threads: threadList,
+})
+})
 
 1. [ ] Understand the requirements
 2. [ ] Plan and Ideate
@@ -166,3 +165,5 @@ Easy to maintain, doesn’t require tech staff
 ```
 - git checkout feature-branch
 ```
+
+- canva ppt: https://www.canva.com/design/DAFwdvSbt5I/OztsxmuPoMRB8rDTtO_iIQ/edit?utm_content=DAFwdvSbt5I&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
