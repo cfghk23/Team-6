@@ -1,5 +1,7 @@
 # Team-6
 
+PPT: https://docs.google.com/presentation/d/1EEfqnWva55caik7d4MN8PLxcSw14296stovk8QoaWtM/edit?usp=sharing
+
 app.patch('/api/update/thread', async (req, res) => {
   const { threadId, newTitle, userId } = req.body
 
