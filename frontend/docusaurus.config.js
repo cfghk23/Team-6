@@ -80,16 +80,9 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Challenges',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
             label: 'Progress Dashboard',
           },
           {to: '/discussion', label: 'Discussion Forum', position: 'left'},
-          {to: '/test', label: 'Test', position: 'left'},
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
