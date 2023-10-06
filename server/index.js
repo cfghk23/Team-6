@@ -9,8 +9,73 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(cors())
 
-const users = []
-const threadList = []
+const users = [
+  {
+    email: 'john.doe@example.com',
+    password: 'password123',
+    username: 'johndoe',
+    id: '0qxzb2ye',
+    status: 'teacher',
+  },
+  {
+    email: 'jane.doe@example.com',
+    password: 'password456',
+    username: 'janedoe',
+    id: '1abx3cde',
+    status: 'student',
+  },
+  {
+    email: 'bob.smith@example.com',
+    password: 'password789',
+    username: 'bobsmith',
+    id: '2fgh4ijk',
+    status: 'teacher',
+  },
+]
+const threadList = [
+  {
+    id: '9qqj9wgn',
+    title: 'New thread title',
+    userId: '0qxzb2ye',
+    replies: [],
+    likes: [],
+  },
+  {
+    id: '8hjg7f6d',
+    title: 'Another thread title',
+    userId: '1abx3cde',
+    replies: [],
+    likes: [],
+  },
+  {
+    id: '7kji6h5g',
+    title: 'A third thread title',
+    userId: '2fgh4ijk',
+    replies: [],
+    likes: [],
+  },
+  {
+    id: '6fed5c4b',
+    title: 'Fourth thread title',
+    userId: '3hij2klm',
+    replies: [],
+    likes: [],
+  },
+  {
+    id: '5cba4b3a',
+    title: 'Fifth thread title',
+    userId: '4mno1pqr',
+    replies: [],
+    likes: [],
+  },
+  {
+    id: '4a3b2c1d',
+    title: 'Sixth thread title',
+    userId: '5stu6vwx',
+    replies: [],
+    likes: [],
+  },
+]
 
 const generateID = () => Math.random().toString(36).substring(2, 10)
 
@@ -32,26 +97,26 @@ app.post('/api/login', (req, res) => {
   })
 })
 
-app.post('/api/register', async (req, res) => {
-  const { email, password, username } = req.body
-  const id = generateID()
-  const result = users.filter(
-    (user) => user.email === email && user.password === password
-  )
+// app.post('/api/register', async (req, res) => {
+//   const { email, password, username } = req.body
+//   const id = generateID()
+//   const result = users.filter(
+//     (user) => user.email === email && user.password === password
+//   )
 
-  if (result.length === 0) {
-    const newUser = { id, email, password, username }
-    // await novu.subscribers.identify(id, { email })
+//   if (result.length === 0) {
+//     const newUser = { id, email, password, username }
+//     // await novu.subscribers.identify(id, { email })
 
-    users.push(newUser)
-    return res.json({
-      message: 'Account created successfully!',
-    })
-  }
-  res.json({
-    error_message: 'User already exists',
-  })
-})
+//     users.push(newUser)
+//     return res.json({
+//       message: 'Account created successfully!',
+//     })
+//   }
+//   res.json({
+//     error_message: 'User already exists',
+//   })
+// })
 
 app.post('/api/create/thread', async (req, res) => {
   const { thread, userId } = req.body
@@ -113,6 +178,7 @@ app.post('/api/thread/like', (req, res) => {
   })
 })
 
+// reply to a post
 app.post('/api/thread/replies', (req, res) => {
   const { id } = req.body
   const result = threadList.filter((thread) => thread.id === id)
@@ -149,3 +215,5 @@ app.post('/api/create/reply', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`)
 })
+
+// delete - owner & admin
