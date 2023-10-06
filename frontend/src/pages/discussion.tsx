@@ -69,9 +69,43 @@ const ListCard = (props: ListCardProps) => {
             >
               Like
             </Button>
-            <Button variant='text'>Comment</Button>
+            <Button
+              variant='text'
+              onClick={() => {
+                axios
+                  .post('http://localhost:4000/api/create/reply', {
+                    threadId: '9qqj9wgn',
+                    userId: '0qxzb2ye',
+                  })
+                  .then(function (response) {
+                    console.log(response)
+                  })
+                  .catch(function (error) {
+                    console.log(error)
+                  })
+              }}
+            >
+              Comment
+            </Button>
             <Button variant='text'>Edit</Button>
-            <Button variant='text'>Delete</Button>
+            <Button
+              variant='text'
+              onClick={() => {
+                axios
+                  .post('http://localhost:4000/api/thread/delete', {
+                    threadId: '9qqj9wgn',
+                    userId: '0qxzb2ye',
+                  })
+                  .then(function (response) {
+                    console.log(response)
+                  })
+                  .catch(function (error) {
+                    console.log(error)
+                  })
+              }}
+            >
+              Delete
+            </Button>
           </Stack>
           <Typography variant='body2' color='text.secondary'>
             {props.description}
