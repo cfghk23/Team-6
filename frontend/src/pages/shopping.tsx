@@ -1,14 +1,15 @@
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import {
     Box,
-    Button, Card, CardActions, CardContent, CardHeader, Container, GlobalStyles, Grid, Link, ThemeProvider, Typography
+    Button, Card, CardActions, CardContent, CardHeader, Container,
+    Dialog,
+    DialogActions, DialogContent, DialogContentText, DialogTitle, GlobalStyles, Grid, Link, ThemeProvider, Typography
 } from "@mui/material";
 import Layout from "@theme/Layout";
 import React, {useState} from "react";
 
 //check wether user can purchase specific item
 const coinOwned = 10000
-// const [purchaseConfirmation, setPurchaseConfirmation] = useState<boolean>(true)
 
 const tiers = [
     {
@@ -68,20 +69,29 @@ const footers = [
     },
 ];
 
-// function SimpleDialog(props: SimpleDialogProps) {
-//     const { onClose, selectedValue, open } = props;
-//
-//     const handleClose = () => {
-//         onClose(selectedValue);
-//     };
-//
-//     const handleListItemClick = (value: string) => {
-//         onClose(value);
-//     };
-
+// function PaperComponent(props: PaperProps) {
+//     return (
+//         <Draggable
+//             handle="#draggable-dialog-title"
+//             cancel={'[class*="MuiDialogContent-root"]'}
+//         >
+//             <Paper {...props} />
+//         </Draggable>
+//     );
+// }
 
 export default function shopping(): JSX.Element {
     const {siteConfig} = useDocusaurusContext();
+    const [purchaseConfirmation, setPurchaseConfirmation] = useState<boolean>(false)
+
+
+    const handleClickOpen = () => {
+        setPurchaseConfirmation(true);
+    };
+
+    const handleClose = () => {
+        setPurchaseConfirmation(false);
+    };
     return (
         <Layout
             title={`Hello from ${siteConfig.title}`}
@@ -148,9 +158,30 @@ export default function shopping(): JSX.Element {
                                             fullWidth
                                             variant='contained'
                                             disabled={coinOwned < parseInt(tier.price)}
+                                            onClick={handleClickOpen}
                                         >
                                             purchase
                                         </Button>
+                                        <Dialog
+                                            open={purchaseConfirmation}
+                                            onClose={handleClose}
+                                            aria-labelledby="draggable-dialog-title"
+                                        >
+                                            <DialogTitle style={{cursor: 'move'}} id="draggable-dialog-title">
+                                                Purchase Confirmation
+                                            </DialogTitle>
+                                            <DialogContent>
+                                                <DialogContentText style={{ wordWrap: "break-word" }}>
+                                                    THINK BEFORE YOU BUY. Are you confirm to puchase?
+                                                </DialogContentText>
+                                            </DialogContent>
+                                            <DialogActions>
+                                                <Button autoFocus onClick={handleClose}>
+                                                    Cancel
+                                                </Button>
+                                                <Button onClick={handleClose}>Purchase</Button>
+                                            </DialogActions>
+                                        </Dialog>
                                     </CardActions>
                                 </Card>
                             </Grid>
@@ -187,9 +218,8 @@ export default function shopping(): JSX.Element {
                     </Grid>
                 </Container>
             </main>
+        </Layout>
 
-</Layout>
-
-)
-    ;
+    )
+        ;
 }
