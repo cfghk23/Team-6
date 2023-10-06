@@ -88,6 +88,7 @@ const config = {
             position: 'left',
             label: 'Progress Dashboard',
           },
+          {to: '/discussion', label: 'Discussion Forum', position: 'left'},
           {to: '/test', label: 'Test', position: 'left'},
           {
             href: 'https://github.com/facebook/docusaurus',
