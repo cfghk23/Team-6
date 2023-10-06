@@ -46,6 +46,7 @@
   Journey with animated character
   Make decisions for character
   Not good looking and rigid
+  Focuses more on completion than progress
 
 # Need-> 
   Efficient
