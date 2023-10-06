@@ -29,7 +29,7 @@
 ## About Project
 
 - Financial Literacy in Asia lagging behind
-- Peer, Play, Purpose, Project, Passion
+- Peer (online peer-based learning), Play, Purpose, Project, Passion
   > Cohort-based project-based learning
   > Games and Fun fairs
   > 100 teaching hours
@@ -42,20 +42,21 @@
   2. Elevator pitch
   3. Parent Academy
 
-#  Have-> 
-  Journey with animated character
-  Make decisions for character
-  Not good looking and rigid
-  Focuses more on completion than progress
+# Have->
 
-# Need-> 
-  Efficient
-  Easy to navigate
-  Gaming element (fun)
-  Increase engagement
-  Give access to teachers, help them see progress of each student
-  Easy to maintain, doesn’t require tech staff
+Journey with animated character
+Make decisions for character
+Not good looking and rigid
+Focuses more on completion than progress
 
+# Need->
+
+Efficient
+Easy to navigate
+Gaming element (fun)
+Increase engagement
+Give access to teachers, help them see progress of each student
+Easy to maintain, doesn’t require tech staff
 
 ## Problem Statement
 
@@ -99,8 +100,11 @@
 5. Visualize the data (teachers)
 6. Leaderboard
 7. Should there be different design for different user groups?
+8. In-person event: newsboard
 
 - different design
+
+9. Peer engagement -> do online
 
 ## Answers
 
