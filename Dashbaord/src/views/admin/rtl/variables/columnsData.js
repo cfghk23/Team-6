@@ -8,8 +8,8 @@ export const columnsDataCheck = [
     accessor: "progress",
   },
   {
-    Header: "QUANTITY",
-    accessor: "quantity",
+    Header: "HOURS SPENT",
+    accessor: "Hours Spent",
   },
   {
     Header: "DATE",

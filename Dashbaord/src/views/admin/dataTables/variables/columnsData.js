@@ -23,17 +23,17 @@ export const columnsDataCheck = [
     accessor: "name",
   },
   {
-    Header: "PROGRESS",
-    accessor: "progress",
-  },
-  {
-    Header: "QUANTITY",
-    accessor: "quantity",
-  },
-  {
     Header: "DATE",
     accessor: "date",
   },
+  {
+    Header: "PROGRESS",
+    accessor: "progress",
+  },
+  // {
+  //   Header: "QUANTITY",
+  //   accessor: "quantity",
+  // },
 ];
 
 export const columnsDataColumns = [
@@ -42,17 +42,17 @@ export const columnsDataColumns = [
     accessor: "name",
   },
   {
-    Header: "PROGRESS",
-    accessor: "progress",
+    Header: "PERCENTAGE",
+    accessor: "percentage",
   },
-  {
-    Header: "QUANTITY",
-    accessor: "quantity",
-  },
-  {
-    Header: "DATE",
-    accessor: "date",
-  },
+  // {
+  //   Header: "QUANTITY",
+  //   accessor: "quantity",
+  // },
+  // {
+  //   Header: "DATE",
+  //   accessor: "date",
+  // },
 ];
 
 export const columnsDataComplex = [
@@ -60,16 +60,20 @@ export const columnsDataComplex = [
     Header: "NAME",
     accessor: "name",
   },
+  // {
+  //   Header: "STATUS",
+  //   accessor: "status",
+  // },
   {
-    Header: "STATUS",
-    accessor: "status",
+    Header: "AVERAGE PERCENTAGE ACHIEVED",
+    accessor: "averagePercentageAchieved",
   },
-  {
-    Header: "DATE",
-    accessor: "date",
-  },
-  {
-    Header: "PROGRESS",
-    accessor: "progress",
-  },
+  // {
+  //   Header: "DATE",
+  //   accessor: "date",
+  // },
+  // {
+  //   Header: "PROGRESS",
+  //   accessor: "progress",
+  // },
 ];

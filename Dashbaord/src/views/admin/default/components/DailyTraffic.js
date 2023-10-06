@@ -45,7 +45,7 @@ export default function DailyTraffic(props) {
               color='secondaryGray.600'
               fontSize='sm'
               fontWeight='500'>
-              Visitors
+              Students
             </Text>
           </Flex>
         </Flex>

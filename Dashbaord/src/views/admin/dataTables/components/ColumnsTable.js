@@ -60,7 +60,7 @@ export default function ColumnsTable(props) {
           fontSize='22px'
           fontWeight='700'
           lineHeight='100%'>
-          4-Column Table
+          Most Failed Quizes
         </Text>
         <Menu />
       </Flex>
@@ -101,7 +101,7 @@ export default function ColumnsTable(props) {
                         </Text>
                       </Flex>
                     );
-                  } else if (cell.column.Header === "PROGRESS") {
+                  } else if (cell.column.Header === "PERCENTAGE") {
                     data = (
                       <Flex align='center'>
                         <Text

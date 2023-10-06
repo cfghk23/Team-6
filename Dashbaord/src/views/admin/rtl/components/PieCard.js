@@ -63,7 +63,7 @@ export default function Conversion(props) {
               color='secondaryGray.600'
               fontWeight='700'
               mb='5px'>
-              Your files
+              Secondary Students
             </Text>
           </Flex>
           <Text fontSize='lg' color={textColor} fontWeight='700'>

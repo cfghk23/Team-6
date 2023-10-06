@@ -26,7 +26,7 @@ export default function Conversion(props) {
         w='100%'
         mb='8px'>
         <Text color={textColor} fontSize='md' fontWeight='600' mt='4px'>
-          COURSE METRICS
+          USER DEMOGRPHICS
         </Text>
         <Select
           fontSize='sm'
@@ -63,7 +63,9 @@ export default function Conversion(props) {
               color='secondaryGray.600'
               fontWeight='700'
               mb='5px'>
-              Your files
+                Secondary
+                 {/* "Primary Students", "Kindergarten Students" */}
+              {/* Your files */}
             </Text>
           </Flex>
           <Text fontSize='lg' color={textColor} fontWeight='700'>
@@ -79,7 +81,8 @@ export default function Conversion(props) {
               color='secondaryGray.600'
               fontWeight='700'
               mb='5px'>
-              System
+              {/* System */}
+              Primary
             </Text>
           </Flex>
           <Text fontSize='lg' color={textColor} fontWeight='700'>

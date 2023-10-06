@@ -86,7 +86,7 @@ export default function TotalSpent(props) {
             textAlign='start'
             fontWeight='700'
             lineHeight='100%'>
-            Progress (In terms of Time Spent)
+            Time Spent
           </Text>
           <Flex align='center' mb='20px'>
             <Text

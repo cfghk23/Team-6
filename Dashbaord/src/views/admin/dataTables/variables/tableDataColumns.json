@@ -1,26 +1,26 @@
 [
   {
-    "name":"Marketplace",
+    "name":"Personal Finance",
     "quantity": 2458, 
     "date": "12.Jan.2021",
-    "progress": 75.5  
+    "percentage": 75.5  
   },
   {
-    "name":"Venus DB PRO",
+    "name":"Introduction to Microfinance",
     "quantity": 1485, 
     "date": "21.Feb.2021",
-    "progress": 35.4  
+    "percentage": 73.4  
   },
   {
-    "name":"Venus DS",
+    "name":"Investment Portfolio Analysis",
     "quantity": 1024, 
     "date": "13.Mar.2021",
-    "progress": 25  
+    "percentage": 70  
   },
   {
-    "name":"Venus 3D Asset",
+    "name":"Risk Management",
     "quantity": 858, 
     "date": "24.Jan.2021",
-    "progress": 100  
+    "percentage": 65 
   }
 ]
