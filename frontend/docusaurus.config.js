@@ -76,7 +76,6 @@ const config = {
             position: 'left',
             label: 'Classes',
           },
-<<<<<<< HEAD
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
@@ -96,9 +95,7 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
-=======
           {to: '/challenges', label: 'Challenges', position: 'left'},
->>>>>>> da0f074b0adc9b8f17d965178ec50309534f842b
           {to: '/shopping', label: 'Shopping', position: 'left'},
           {
             href: 'https://github.com/facebook/docusaurus',

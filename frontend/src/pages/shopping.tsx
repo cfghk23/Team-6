@@ -4,11 +4,11 @@ import {
     Button, Card, CardActions, CardContent, CardHeader, Container, GlobalStyles, Grid, Link, ThemeProvider, Typography
 } from "@mui/material";
 import Layout from "@theme/Layout";
-import React from "react";
+import React, {useState} from "react";
 
 //check wether user can purchase specific item
 const coinOwned = 10000
-
+const [purchaseConfirmation, setPurchaseConfirmation] = useState<boolean>(true)
 
 const tiers = [
     {
@@ -68,6 +68,17 @@ const footers = [
     },
 ];
 
+// function SimpleDialog(props: SimpleDialogProps) {
+//     const { onClose, selectedValue, open } = props;
+//
+//     const handleClose = () => {
+//         onClose(selectedValue);
+//     };
+//
+//     const handleListItemClick = (value: string) => {
+//         onClose(value);
+//     };
+
 
 export default function shopping(): JSX.Element {
     const {siteConfig} = useDocusaurusContext();
@@ -103,7 +114,7 @@ export default function shopping(): JSX.Element {
                                 <Card>
                                     <CardHeader
                                         title={tier.title}
-                                        titleTypographyProps={{ align: 'center' }}
+                                        titleTypographyProps={{align: 'center'}}
                                         subheaderTypographyProps={{
                                             align: 'center',
                                         }}
@@ -176,6 +187,20 @@ export default function shopping(): JSX.Element {
                     </Grid>
                 </Container>
             </main>
-        </Layout>
-    );
+            {
+                purchaseConfirmation &&
+        //         <Button variant="outlined" onClick={handleClickOpen}>
+        //             Open simple dialog
+        //         </Button>
+        //         <SimpleDialog
+        //         selectedValue={selectedValue}
+        //     open={open}
+        //     onClose={handleClose}
+        // />
+
+}
+</Layout>
+
+)
+    ;
 }
