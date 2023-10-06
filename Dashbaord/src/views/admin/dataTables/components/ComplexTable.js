@@ -65,7 +65,7 @@ export default function ColumnsTable(props) {
           fontSize='22px'
           fontWeight='700'
           lineHeight='100%'>
-          Complex Table
+          SCHOOLS
         </Text>
         <Menu />
       </Flex>
@@ -104,7 +104,7 @@ export default function ColumnsTable(props) {
                         {cell.value}
                       </Text>
                     );
-                  } else if (cell.column.Header === "STATUS") {
+                  } else if (cell.column.Header === "APPROVAL STATUS") {
                     data = (
                       <Flex align='center'>
                         <Icon
@@ -141,7 +141,7 @@ export default function ColumnsTable(props) {
                         {cell.value}
                       </Text>
                     );
-                  } else if (cell.column.Header === "PROGRESS") {
+                  } else if (cell.column.Header === "COURSE COMPLETION STATUS") {
                     data = (
                       <Flex align='center'>
                         <Progress

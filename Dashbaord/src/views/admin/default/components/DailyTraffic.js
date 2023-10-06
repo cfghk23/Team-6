@@ -38,7 +38,7 @@ export default function DailyTraffic(props) {
               fontSize='34px'
               fontWeight='700'
               lineHeight='100%'>
-              2.579
+              138
             </Text>
             <Text
               ms='6px'

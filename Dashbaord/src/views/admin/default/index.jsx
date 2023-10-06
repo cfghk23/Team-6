@@ -43,6 +43,7 @@ import {
   MdAttachMoney,
   MdBarChart,
   MdFileCopy,
+  
 } from "react-icons/md";
 import CheckTable from "views/admin/default/components/CheckTable";
 import ComplexTable from "views/admin/default/components/ComplexTable";
@@ -79,24 +80,24 @@ export default function UserReports() {
               }
             />
           }
-          name='Earnings'
-          value='$350.4'
+          name='TOTAL STUDENTS '
+          value='6759'
         />
         <MiniStatistics
           startContent={
             <IconBox
               w='56px'
               h='56px'
-              bg={boxBg}
+              bg={""}
               icon={
-                <Icon w='32px' h='32px' as={MdAttachMoney} color={brandColor} />
+                <Icon w='32px' h='32px' as={""} color={brandColor} />
               }
             />
           }
-          name='Spend this month'
-          value='$642.39'
+          name='NEW STUDENTS THIS MONTH'
+          value='549'
         />
-        <MiniStatistics growth='+23%' name='Sales' value='$574.34' />
+        <MiniStatistics growth='+8.1%' name='MONTH-ON-MONTH GROWTH'/>
         <MiniStatistics
           endContent={
             <Flex me='-16px' mt='10px'>
@@ -115,8 +116,8 @@ export default function UserReports() {
               </Select>
             </Flex>
           }
-          name='Your balance'
-          value='$1,000'
+          name='TOTAL USAGE HOURS (CUMULATIVE)'
+          value='7569 HOURS WATCHED'
         />
         <MiniStatistics
           startContent={
@@ -127,8 +128,8 @@ export default function UserReports() {
               icon={<Icon w='28px' h='28px' as={MdAddTask} color='white' />}
             />
           }
-          name='New Tasks'
-          value='154'
+          name='NEW COURSES UPLOADED (< 3 DAYS)'
+          value='3'
         />
         <MiniStatistics
           startContent={
@@ -141,8 +142,8 @@ export default function UserReports() {
               }
             />
           }
-          name='Total Projects'
-          value='2935'
+          name='TOTAL COURSES'
+          value='148'
         />
       </SimpleGrid>
 

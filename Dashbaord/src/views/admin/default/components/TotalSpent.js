@@ -82,11 +82,11 @@ export default function TotalSpent(props) {
         <Flex flexDirection='column' me='20px' mt='28px'>
           <Text
             color={textColor}
-            fontSize='34px'
+            fontSize='12px'
             textAlign='start'
             fontWeight='700'
             lineHeight='100%'>
-            $37.5K
+            Progress (In terms of Time Spent)
           </Text>
           <Flex align='center' mb='20px'>
             <Text
@@ -95,7 +95,7 @@ export default function TotalSpent(props) {
               fontWeight='500'
               mt='4px'
               me='12px'>
-              Total Spent
+              Change in the number hours spent
             </Text>
             <Flex align='center'>
               <Icon as={RiArrowUpSFill} color='green.500' me='2px' mt='2px' />

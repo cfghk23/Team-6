@@ -1,66 +1,66 @@
 [
   {
-    "name":"Marketplace",
+    "name":"Island School",
     "tech": ["apple","android","windows"], 
     "date": "12.Jan.2021",
     "progress": 75.5  
   },
   {
-    "name":"Venus DB PRO",
+    "name":"Hong Kong Academy",
     "tech": ["apple" ], 
     "date": "21.Feb.2021",
     "progress": 35.4  
   },
   {
-    "name":"Venus DS",
+    "name":"King's College",
     "tech": ["apple" ,"windows"], 
     "date": "13.Mar.2021",
     "progress": 25  
   },
   {
-    "name":"Venus 3D Asset",
+    "name":"St. Paul's College",
     "tech": ["apple","android","windows"], 
     "date": "24.Jan.2021",
     "progress": 100  
   },
   {
-    "name":"Marketplace",
+    "name":"Ying Wa Girl's High School",
     "tech": ["apple", "windows"], 
     "date": "Oct 24, 2022",
     "progress": 75.5  
   },
   {
-    "name":"Marketplace",
+    "name":"Delta School",
     "tech": ["apple","android","windows"], 
     "date": "Oct 24, 2022",
     "progress": 75.5  
   },
   {
-    "name":"Marketplace",
+    "name":"Man Kiu High School",
     "tech": ["apple","android","windows"], 
     "date": "12.Jan.2021",
     "progress": 75.5  
   },
   {
-    "name":"Venus DB PRO",
+    "name":"Heep Yun School",
     "tech": ["apple" ], 
     "date": "21.Feb.2021",
     "progress": 35.4  
   },
   {
-    "name":"Venus DS",
+    "name":"Lingnan High School",
     "tech": ["apple" ,"windows"], 
     "date": "13.Mar.2021",
     "progress": 25  
   },
   {
-    "name":"Venus 3D Asset",
+    "name":"Discovery College",
     "tech": ["apple","android","windows"], 
     "date": "24.Jan.2021",
     "progress": 100  
   },
   {
-    "name":"Marketplace",
+    "name":"Anantra College",
     "tech": ["apple", "windows"], 
     "date": "Oct 24, 2022",
     "progress": 75.5  
