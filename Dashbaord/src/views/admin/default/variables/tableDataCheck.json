@@ -1,0 +1,31 @@
+[{
+  "name":["Fun with Finance!"],
+  "quantity": 2201, 
+  "date": "12 Jan 2021",
+  "ratings": 17.5  
+},
+{
+  "name":["Personal Finance"],
+  "quantity": 1434, 
+  "date": "21 Feb 2021",
+  "ratings": 10.8  
+},
+{
+  "name":["How to create a personal budget"],
+  "quantity": 1004, 
+  "date": "13 Mar 2021",
+  "ratings": 21.3  
+},
+{
+  "name":["Money For Dummies"],
+  "quantity": 858, 
+  "date": "24 Jan 2021",
+  "ratings": 31.5  
+},
+{
+  "name":["Markets Crash Course"],
+  "quantity": 258, 
+  "date": "24 Oct 2022",
+  "ratings": 12.2  
+}
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "name":"Marketplace",
+    "status": "Approved",
+    "averagePercentageAchieved": "91%",
+    "progress": 75.5  
+  },
+  {
+    "name":"Marketplace",
+    "status": "Disable",
+    "averagePercentageAchieved": "89.3%",
+    "progress": 25.5  
+  },
+  {
+    "name":"Marketplace",
+    "status": "Error",
+    "averagePercentageAchieved": "85%",
+    "progress": 90  
+  },
+  {
+    "name":"Marketplace",
+    "status": "Approved",
+    "averagePercentageAchieved": "80%",
+    "progress": 50.5  
+  }
+]

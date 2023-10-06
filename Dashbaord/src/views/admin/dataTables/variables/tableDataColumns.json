@@ -1,0 +1,26 @@
+[
+  {
+    "name":"Personal Finance",
+    "quantity": 2458, 
+    "date": "12.Jan.2021",
+    "percentage": 75.5  
+  },
+  {
+    "name":"Introduction to Microfinance",
+    "quantity": 1485, 
+    "date": "21.Feb.2021",
+    "percentage": 73.4  
+  },
+  {
+    "name":"Investment Portfolio Analysis",
+    "quantity": 1024, 
+    "date": "13.Mar.2021",
+    "percentage": 70  
+  },
+  {
+    "name":"Risk Management",
+    "quantity": 858, 
+    "date": "24.Jan.2021",
+    "percentage": 65 
+  }
+]
