@@ -1,5 +1,40 @@
 # Team-6
 
+app.patch('/api/update/thread', async (req, res) => {
+  const { threadId, newTitle, userId } = req.body
+
+  // Find the thread in the threadList
+  let thread = threadList.find(t => t.id === threadId)
+
+  if (!thread) {
+    return res.status(404).json({
+      message: 'Thread not found!'
+    })
+  }
+
+  // Check if the user is authorized to update the thread
+  if (thread.userId !== userId) {
+    return res.status(403).json({
+      message: 'User not authorized to update this thread'
+    })
+  }
+
+  // Update the thread
+  thread.title = newTitle
+
+  // Persist the update in novu.topics
+  await novu.topics.update({
+    key: threadId,
+    name: newTitle,
+  })
+
+  res.json({
+    message: 'Thread updated successfully!',
+    threads: threadList,
+  })
+})
+
+
 1. [ ] Understand the requirements
 2. [ ] Plan and Ideate
 3. [ ] Design and Architecture - frontend - backend - Deployment Infrastructure (AWS/Azure, Docker, ...)
