@@ -6,6 +6,10 @@ import {
 import Layout from "@theme/Layout";
 import React from "react";
 
+//check wether user can purchase specific item
+const coinOwned = 10000
+
+
 function Copyright(props: any) {
     return (
         <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -22,25 +26,25 @@ function Copyright(props: any) {
 const tiers = [
     {
         title: 'Glasses',
-        price: '1000',
+        price: '500',
     },
     {
         title: 'Dress',
-        price: '1000',
+        price: '500',
     },
     {
         title: 'Hat',
-        price: '1000',
+        price: '500',
     },
     {
         title: 'necklaces',
         price: '1000',
     }, {
         title: 'bracelets',
-        price: '1000',
+        price: '1000000',
     }, {
         title: 'watches',
-        price: '1000',
+        price: '10000',
     }, {
         title: 'pins',
         price: '1000',
@@ -112,9 +116,7 @@ export default function shopping(): JSX.Element {
                                 <Card>
                                     <CardHeader
                                         title={tier.title}
-                                        subheader={tier.subheader}
-                                        titleTypographyProps={{align: 'center'}}
-                                        // action={tier.title === 'Pro' ? <StarIcon /> : null}
+                                        titleTypographyProps={{ align: 'center' }}
                                         subheaderTypographyProps={{
                                             align: 'center',
                                         }}
@@ -134,10 +136,10 @@ export default function shopping(): JSX.Element {
                                                 mb: 2,
                                             }}
                                         >
-
-                                            <Typography component="h2" variant="h6" color="text.primary" align='center'>
+                                            <Typography component="h2" variant="h6" color="text.primary" align='center'
+                                                        display={'linline'}>
                                                 <img src='img/undraw_docusaurus_react.svg' alt='product picture'/>
-                                                ${tier.price + ' coins'}
+                                                {tier.price + ' coins'}
                                             </Typography>
                                         </Box>
                                         <ul>
@@ -147,6 +149,7 @@ export default function shopping(): JSX.Element {
                                         <Button
                                             fullWidth
                                             variant='contained'
+                                            disabled={coinOwned < parseInt(tier.price)}
                                         >
                                             purchase
                                         </Button>
