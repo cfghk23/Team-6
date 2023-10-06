@@ -25,10 +25,10 @@ import {
 import axios from 'axios'
 
 interface ListCardProps {
-  title: string;
-  description: string;
-  onChange: any;
-  onDelete: any;
+  title: string
+  description: string
+  onChange: any
+  onDelete: any
 }
 
 const ListCard = (props: ListCardProps) => {
@@ -97,15 +97,20 @@ const ListCard = (props: ListCardProps) => {
                   .catch(function (error) {
                     console.log(error)
                   })
-                  if (!liked) {
-                    setLikes(likes + 1);
-                    setLiked(true);
-                  } else {
-                    setLikes(likes - 1);
-                    setLiked(false);
-                  }
-              }}>Like {likes}</Button>
-                    <Button variant="text" onClick={() => {
+                if (!liked) {
+                  setLikes(likes + 1)
+                  setLiked(true)
+                } else {
+                  setLikes(likes - 1)
+                  setLiked(false)
+                }
+              }}
+            >
+              Like {likes}
+            </Button>
+            <Button
+              variant='text'
+              onClick={() => {
                 axios
                   .post('http://localhost:4000/api/create/reply', {
                     threadId: '9qqj9wgn',
@@ -154,24 +159,26 @@ const ListCard = (props: ListCardProps) => {
                   .catch(function (error) {
                     console.log(error)
                   })
-                  props.onDelete()}
-              }>Delete</Button>
-                </Stack>
-            </Stack>
-        </CardContent>
+                props.onDelete()
+              }}
+            >
+              Delete
+            </Button>
+          </Stack>
+        </Stack>
+      </CardContent>
     </Card>
   )
 }
 
 interface ContentCardProps {
-  isLong: boolean;
-};
-
+  isLong: boolean
+}
 
 export default function SignIn() {
-  const [contentIsLongQ, setContentIsLongQ] = React.useState(true);
+  const [contentIsLongQ, setContentIsLongQ] = React.useState(true)
   const [deleted, setDeleted] = React.useState([false, false, false])
-  const [, forceUpdate] = React.useReducer(x => x + 1, 0);
+  const [, forceUpdate] = React.useReducer((x) => x + 1, 0)
 
   return (
     <Layout

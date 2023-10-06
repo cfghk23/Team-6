@@ -42,31 +42,31 @@ const users = [
 const threadList = [
   {
     id: '9qqj9wgn',
-    title: 'New thread title',
+    title: 'Compound Interest: What it it?...',
     userId: '0qxzb2ye',
     replies: [],
-    likes: [],
+    likes: ['0qxzb2ye', '8hjg7f6d'],
   },
   {
     id: '8hjg7f6d',
-    title: 'Another thread title',
+    title: 'Can I spend all my money on buying candies?',
     userId: '1abx3cde',
     replies: [],
-    likes: [],
+    likes: ['0qxzb2ye', '8hjg7f6d'],
   },
   {
     id: '7kji6h5g',
-    title: 'A third thread title',
+    title: 'Is it ok to invest as a 10-year old?',
     userId: '2fgh4ijk',
     replies: [],
     likes: [],
   },
   {
     id: '6fed5c4b',
-    title: 'Fourth thread title',
+    title: 'How can I find the best budgeting way?',
     userId: '3hij2klm',
     replies: [],
-    likes: [],
+    likes: ['0qxzb2ye', '8hjg7f6d', '5cba4b3a'],
   },
   {
     id: '5cba4b3a',
