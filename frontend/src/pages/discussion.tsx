@@ -12,6 +12,11 @@ import {
   ButtonBase,
   CardActionArea,
   CardActions,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
   Stack,
   TextField,
   ToggleButton,
@@ -29,6 +34,29 @@ interface ListCardProps {
 const ListCard = (props: ListCardProps) => {
   const [likes, setLikes] = React.useState(Math.floor(Math.random() * 50))
   const [liked, setLiked] = React.useState(false)
+
+  const [commentOnClick, setCommentOnClick] = React.useState<boolean>(false)
+
+    const [open, setOpen] = React.useState(false);
+    const [comment, setComment] = React.useState<string>('')
+    const [tmpComment, setTmpComment] = React.useState<string>('')
+
+
+    const handleCommentClickOpen = () => {
+        setCommentOnClick(true);
+    };
+
+    const handleCommentClose = () => {
+        setCommentOnClick(false);
+    };
+
+    const handleCommentSubmit = () =>{
+        setCommentOnClick(false)
+        setComment(tmpComment)
+    }
+
+    const handleCommentTextField = e => setTmpComment(e.target.value)
+
 
   return (
     <Card sx={{ width: 800 }}>
@@ -49,7 +77,8 @@ const ListCard = (props: ListCardProps) => {
                                 {props.title}
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                                {props.description}
+                                {props.description} <br/>
+                                {comment == '' ? null : 'Comment: ' + comment}
                             </Typography>
                         </Stack>
                     </Stack>
@@ -88,20 +117,31 @@ const ListCard = (props: ListCardProps) => {
                   .catch(function (error) {
                     console.log(error)
                   })
+                  handleCommentClickOpen();
               }}>Comment</Button>
-                    <Button variant="text" onClick={() => {
-                axios
-                  .post('http://localhost:4000/api/create/reply', {
-                    threadId: '9qqj9wgn',
-                    userId: '0qxzb2ye',
-                  })
-                  .then(function (response) {
-                    console.log(response)
-                  })
-                  .catch(function (error) {
-                    console.log(error)
-                  })
-              }}>Edit</Button>
+              <Dialog open={commentOnClick} onClose={handleCommentClose} fullWidth={true}>
+                            <DialogTitle>Comment</DialogTitle>
+                            <DialogContent>
+                                <DialogContentText>
+                                    Please enter the comment.
+                                </DialogContentText>
+                                <TextField
+                                    autoFocus
+                                    margin="dense"
+                                    id="name"
+                                    label="Comment"
+                                    type="email"
+                                    fullWidth
+                                    variant="standard"
+                                    onChange={handleCommentTextField}
+                                    />
+                            </DialogContent>
+                            <DialogActions>
+                                <Button onClick={handleCommentClose}>Cancel</Button>
+                                <Button onClick={handleCommentSubmit}>Submit</Button>
+                            </DialogActions>
+                        </Dialog>
+
                     <Button variant="text" onClick={() => {
                 axios
                   .post('http://localhost:4000/api/thread/delete', {
@@ -152,12 +192,12 @@ export default function SignIn() {
                 setDeleted(d);
                 forceUpdate();
               }}/>}
-              {deleted[2] ? null : <ListCard title="What is the purpose of a credit score?" description="Like why use credit score, it makes it looks like a competition..." onChange={() => {setContentIsLongQ(false)}} onDelete={() => {
+              <ListCard title="What is the purpose of a credit score?" description="Like why use credit score, it makes it looks like a competition..." onChange={() => {setContentIsLongQ(false)}} onDelete={() => {
                 var d = deleted;
                 d[2] = true;
                 setDeleted(d);
                 forceUpdate();
-              }}/>}
+              }}/>
             </Stack>          
         </Stack>
       </Box>

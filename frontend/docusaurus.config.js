@@ -77,24 +77,13 @@ const config = {
             label: 'Classes',
           },
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
+            href: 'http://localhost:3456/#/admin/default',
+            position: 'right',
             label: 'Progress Dashboard',
           },
           {to: '/discussion', label: 'Discussion Forum', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
           {to: '/challenges', label: 'Challenges', position: 'left'},
           {to: '/shopping', label: 'Shopping', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
         ],
       },
     //   footer: {
