@@ -1,0 +1,23 @@
+Questions->
+    1) How learning content is created: 
+        articulate, storyline file and upload to moodle (interactive)
+    2) 5P: 
+        business plan comp, budgeting comp, compare best plans, entrepreneurship competition, market research, pricing, marketing
+    3) Different user groups have different schemes: 
+        different content and design (cartoons to tech based)
+    4) Who has access: 
+        teacher can choose which module to go for, pick certain, self navigating and self directed
+    5) Evaluation metrics (right or wrong, checked automatically or teacher checked): 
+        show answer, explain the answer
+    6) Mobile compatible: 
+        works on laptop and ipads
+    7) Biggest user demographics:
+        lower secondary and primary
+    8) Common painpoints for teachers and students:
+        teachers: how is student doing, system not easy to schemes
+        student: care about points and stars they got (rewards are important)
+        !!! ADD BADGES AND RANKING 
+    9) Can every teacher access all reports, can students see progress:
+        only access to only their own school and their own classes is preferred
+        ranking chart already exists
+
