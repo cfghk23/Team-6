@@ -48,6 +48,9 @@
 
 - a solution that incorporates effective educational methods, gamification elements, and intuitive design.
 
+- Animated character
+- Color schemes
+
 2. Teachers & Admins
 
 - Data visualization for analyzing better user engagement patterns
@@ -62,8 +65,12 @@
 3. Can a course use different party resources?
    - Kahoot, is it ok to direct them?
 4. What metrics do we need to take account for?
+
    - Time
+   - has to be divided by course name
+
 5. Visualize the data (teachers)
+6. Leaderboard
 
 ## Branching
 
