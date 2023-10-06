@@ -27,6 +27,9 @@ interface ListCardProps {
 }
 
 const ListCard = (props: ListCardProps) => {
+  const [likes, setLikes] = React.useState(Math.floor(Math.random() * 50))
+  const [liked, setLiked] = React.useState(false)
+
   return (
     <Card sx={{ width: 800 }}>
         <CardContent>
@@ -53,7 +56,7 @@ const ListCard = (props: ListCardProps) => {
                 </Stack>
                 </ButtonBase>
                 <Stack spacing={{ xs: 1, sm: 2 }} direction="row" useFlexGap>
-                    <Button variant="text" onClick={() => {
+                    <Button variant={liked ? "contained": "text"} onClick={() => {
                 axios
                   .post('http://localhost:4000/api/thread/like', {
                     threadId: '9qqj9wgn',
@@ -65,7 +68,14 @@ const ListCard = (props: ListCardProps) => {
                   .catch(function (error) {
                     console.log(error)
                   })
-              }}>Like</Button>
+                  if (!liked) {
+                    setLikes(likes + 1);
+                    setLiked(true);
+                  } else {
+                    setLikes(likes - 1);
+                    setLiked(false);
+                  }
+              }}>Like {likes}</Button>
                     <Button variant="text" onClick={() => {
                 axios
                   .post('http://localhost:4000/api/create/reply', {
