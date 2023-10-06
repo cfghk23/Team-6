@@ -59,6 +59,7 @@ function ContentCard(props: ContentCardProps) {
         Class: Budget - Week 2 - Team Challenges!
       </Typography>
       <Typography variant="body1" color="text.secondary" sx={{padding: '5px'}}>
+        Due 13 Oct
       </Typography>
       <Typography variant="body1" color="text.secondary" sx={{padding: '5px'}}>
       Explain the concept of budgeting and why it is important for individuals to create and follow a budget. Discuss it with your teammates. You may add any media to help you explain your answer.
@@ -86,6 +87,15 @@ function ContentCard(props: ContentCardProps) {
 
   const MCQDemo = () => <>
       {/* <img src="img/docusaurus-social-card.jpg" /> */}
+      <Typography variant="h4" color="text.secondary" sx={{padding: '5px'}}>
+        Class: Saving and Investing - Week 2 - Individual Challenge!
+      </Typography>
+      <Typography variant="body1" color="text.secondary" sx={{padding: '5px'}}>
+        Due 14 Oct
+      </Typography>
+      <Typography variant="body1" color="text.secondary" sx={{padding: '5px'}}>
+        What is the main difference between saving and investing?
+      </Typography>
       <ToggleButtonGroup
         color="primary"
         value={selected}
@@ -93,18 +103,14 @@ function ContentCard(props: ContentCardProps) {
         onChange={(event, value) => {
           setSelected(value);
         }}
+        orientation='vertical'
         sx={{ padding: "5px", width: "100%", alignContent: "center", justifyContent: "center" }}
       >
-        <ToggleButton value={0}>All</ToggleButton>
-        <ToggleButton value={1}>A lot</ToggleButton>
-        <ToggleButton value={2}>A bit</ToggleButton>
-        <ToggleButton value={3}>None</ToggleButton>
+        <Box style={{ padding: '5px' }}><ToggleButton value={0} selected={selected == 0} onClick={(event, value) => setSelected(value)} style={{ textAlign: 'left' }}>Saving involves putting money aside for short-term goals, while investing involves putting money into long-term ventures.</ToggleButton></Box>
+        <Box style={{ padding: '5px' }}><ToggleButton value={1} selected={selected == 1} onClick={(event, value) => setSelected(value)} style={{ textAlign: 'left' }}>Saving is only for emergencies, while investing is for long-term financial growth.</ToggleButton></Box>
+        <Box style={{ padding: '5px' }}><ToggleButton value={2} selected={selected == 2} onClick={(event, value) => setSelected(value)} style={{ textAlign: 'left' }}>Saving is a low-risk strategy, while investing carries a higher level of risk.</ToggleButton></Box>
+        <Box style={{ padding: '5px' }}><ToggleButton value={3} selected={selected == 3} onClick={(event, value) => setSelected(value)} style={{ textAlign: 'left' }}>Saving is done through banks, while investing is done through the stock market.</ToggleButton></Box>
       </ToggleButtonGroup>
-      <Button size="small">Comment</Button>
-      <Typography variant="body2" color="text.secondary">
-        <strong>Student A</strong>: I think it's A lot<br/>
-        <strong>Student B</strong>: I think it's A bit<br/>
-      </Typography>
     </>
 
   return (
@@ -135,7 +141,7 @@ export default function SignIn() {
           <Box height="75vh" style={{ overflowY: "scroll" }}>
             <Stack spacing={2} direction="column">
               <ListCard title="Budget" description="Week 2 - Team Challenge" onChange={() => {setContentIsLongQ(true)}} />
-              <ListCard title="Class 2" description="This is a class" onChange={() => {setContentIsLongQ(false)}}/>
+              <ListCard title="Saving and Investing" description="Week 2 - Individual Challenge" onChange={() => {setContentIsLongQ(false)}}/>
             </Stack>
           </Box>
           <Box height="75vh" style={{ overflowY: "scroll" }}>
