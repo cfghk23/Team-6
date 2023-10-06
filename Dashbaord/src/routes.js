@@ -11,8 +11,6 @@ import {
 
 // Admin Imports
 import MainDashboard from "views/admin/default";
-// import NFTMarketplace from "views/admin/marketplace";
-// import Profile from "views/admin/profile";
 import DataTables from "views/admin/dataTables";
 
 const routes = [
