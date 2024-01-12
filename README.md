@@ -167,3 +167,7 @@ Easy to maintain, doesn’t require tech staff
 ```
 
 - canva ppt: https://www.canva.com/design/DAFwdvSbt5I/OztsxmuPoMRB8rDTtO_iIQ/edit?utm_content=DAFwdvSbt5I&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+
+
+The code ("Code") in this repository was created solely by the student teams during a coding competition hosted by JPMorgan Chase Bank, N.A. ("JPMC"). JPMC did not create or contribute to the development of the Code. This Code is provided AS IS and JPMC makes no warranty of any kind, express or implied, as to the Code, including but not limited to, merchantability, satisfactory quality, non-infringement, title or fitness for a particular purpose or use.
